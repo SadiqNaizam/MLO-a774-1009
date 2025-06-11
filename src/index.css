@@ -4,89 +4,91 @@
 
 @layer base {
   :root {
-    --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
+    --background: 0 0% 100%; /* TSB: Solid White #FFFFFF */
+    --foreground: 0 0% 17.6%; /* TSB: Dark Text #2D2D2D */
 
-    --card: 0 0% 100%;
-    --card-foreground: 222.2 84% 4.9%;
+    --card: 0 0% 100%; /* TSB: Solid White #FFFFFF */
+    --card-foreground: 0 0% 17.6%; /* TSB: Dark Text #2D2D2D */
 
-    --popover: 0 0% 100%;
-    --popover-foreground: 222.2 84% 4.9%;
+    --popover: 0 0% 100%; /* TSB: Solid White #FFFFFF */
+    --popover-foreground: 0 0% 17.6%; /* TSB: Dark Text #2D2D2D */
 
-    --primary: 222.2 47.4% 11.2%;
-    --primary-foreground: 210 40% 98%;
+    --primary: 213 100% 35.3%; /* TSB Blue #0051b4 */
+    --primary-foreground: 0 0% 100%; /* TSB: White #FFFFFF for contrast */
+    --primary-light: 199 100% 44.1%; /* TSB: Light Blue #00A3E1 */
+    --primary-dark: 212 100% 22.7%; /* TSB: Dark Blue #003974 */
 
-    --secondary: 210 40% 96.1%;
-    --secondary-foreground: 222.2 47.4% 11.2%;
+    --secondary: 212 100% 22.7%; /* TSB: Dark Blue #003974 (as supporting/secondary) */
+    --secondary-foreground: 0 0% 100%; /* TSB: White #FFFFFF for contrast */
 
-    --muted: 210 40% 96.1%;
-    --muted-foreground: 215.4 16.3% 46.9%;
+    --muted: 0 0% 95.3%; /* TSB: Neutral Grey #F3F3F3 */
+    --muted-foreground: 0 0% 45.9%; /* TSB: Subtext Grey #757575 */
 
-    --accent: 210 40% 96.1%;
-    --accent-foreground: 222.2 47.4% 11.2%;
+    --accent: 170 64.2% 44.3%; /* TSB: Teal #27BBA2 */
+    --accent-foreground: 0 0% 100%; /* TSB: White #FFFFFF for contrast */
 
-    --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 210 40% 98%;
+    --destructive: 0 84.2% 60.2%; /* Retained from previous, adjust if TSB has specific error red */
+    --destructive-foreground: 0 0% 100%; /* White for contrast on destructive red */
 
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
-    --ring: 222.2 84% 4.9%;
+    --border: 0 0% 89.8%; /* TSB: Neutral Grey #E5E5E5 for dividers/borders */
+    --input: 0 0% 89.8%; /* TSB: Neutral Grey #E5E5E5 for input borders */
+    --ring: 213 100% 35.3%; /* TSB: TSB Blue #0051b4 for focus indicators */
 
-    --radius: 0.5rem;
+    --radius: 1rem; /* TSB: 16px for cards/major elements */
 
-    --sidebar-background: 0 0% 98%;
+    --font-sans: "Inter", "Helvetica Neue", "SF Pro", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
 
-    --sidebar-foreground: 240 5.3% 26.1%;
-
-    --sidebar-primary: 240 5.9% 10%;
-
-    --sidebar-primary-foreground: 0 0% 98%;
-
-    --sidebar-accent: 240 4.8% 95.9%;
-
-    --sidebar-accent-foreground: 240 5.9% 10%;
-
-    --sidebar-border: 220 13% 91%;
-
-    --sidebar-ring: 217.2 91.2% 59.8%;
+    /* Sidebar specific variables aligned with TSB Theme */
+    --sidebar-background: 0 0% 95.3%; /* Using Muted Grey #F3F3F3 */
+    --sidebar-foreground: 0 0% 17.6%; /* Dark Text #2D2D2D */
+    --sidebar-primary: 213 100% 35.3%; /* TSB Blue */
+    --sidebar-primary-foreground: 0 0% 100%; /* White */
+    --sidebar-accent: 199 100% 44.1%; /* Light Blue */
+    --sidebar-accent-foreground: 0 0% 100%; /* White (contrast on Light Blue) */
+    --sidebar-border: 0 0% 89.8%; /* Neutral Grey #E5E5E5 */
+    --sidebar-ring: 213 100% 35.3%; /* TSB Blue */
   }
 
   .dark {
-    --background: 222.2 84% 4.9%;
-    --foreground: 210 40% 98%;
+    --background: 212 100% 10%; /* Dark theme: Very Dark Blue */
+    --foreground: 0 0% 95.3%; /* Dark theme: Light Neutral Grey #F3F3F3 */
 
-    --card: 222.2 84% 4.9%;
-    --card-foreground: 210 40% 98%;
+    --card: 212 100% 15%; /* Dark theme: Dark Blue, slightly lighter than bg */
+    --card-foreground: 0 0% 95.3%;
 
-    --popover: 222.2 84% 4.9%;
-    --popover-foreground: 210 40% 98%;
+    --popover: 212 100% 15%;
+    --popover-foreground: 0 0% 95.3%;
 
-    --primary: 210 40% 98%;
-    --primary-foreground: 222.2 47.4% 11.2%;
+    --primary: 199 100% 44.1%; /* Dark theme: Light Blue #00A3E1 */
+    --primary-foreground: 212 100% 18%; /* Dark theme: Darker blue for contrast on light blue */
+    --primary-light: 199 100% 50%; /* Dark theme: Even lighter blue */
+    --primary-dark: 213 100% 35.3%; /* Dark theme: TSB Blue #0051b4 */
+    
+    --secondary: 213 100% 30%; /* Dark theme: A slightly muted TSB Blue */
+    --secondary-foreground: 0 0% 95.3%;
 
-    --secondary: 217.2 32.6% 17.5%;
-    --secondary-foreground: 210 40% 98%;
+    --muted: 212 50% 20%; /* Dark theme: Darker, less saturated blue/grey */
+    --muted-foreground: 0 0% 60%; /* Dark theme: Lighter Grey */
 
-    --muted: 217.2 32.6% 17.5%;
-    --muted-foreground: 215 20.2% 65.1%;
+    --accent: 170 64.2% 55%; /* Dark theme: Lighter Teal */
+    --accent-foreground: 212 100% 10%; /* Dark theme: Very Dark Blue for contrast */
 
-    --accent: 217.2 32.6% 17.5%;
-    --accent-foreground: 210 40% 98%;
+    --destructive: 0 70% 50%; /* Dark theme: Adjusted destructive red */
+    --destructive-foreground: 0 0% 95.3%;
 
-    --destructive: 0 62.8% 30.6%;
-    --destructive-foreground: 210 40% 98%;
+    --border: 212 100% 20%; /* Dark theme: Darker Blue/Grey for borders */
+    --input: 212 100% 20%;
+    --ring: 199 100% 44.1%; /* Dark theme: Light Blue for focus */
 
-    --border: 217.2 32.6% 17.5%;
-    --input: 217.2 32.6% 17.5%;
-    --ring: 212.7 26.8% 83.9%;
-    --sidebar-background: 240 5.9% 10%;
-    --sidebar-foreground: 240 4.8% 95.9%;
-    --sidebar-primary: 224.3 76.3% 48%;
-    --sidebar-primary-foreground: 0 0% 100%;
-    --sidebar-accent: 240 3.7% 15.9%;
-    --sidebar-accent-foreground: 240 4.8% 95.9%;
-    --sidebar-border: 240 3.7% 15.9%;
-    --sidebar-ring: 217.2 91.2% 59.8%;
+    /* Dark Sidebar specific variables */
+    --sidebar-background: 212 100% 12%;
+    --sidebar-foreground: 0 0% 95.3%;
+    --sidebar-primary: 199 100% 44.1%; /* Light Blue */
+    --sidebar-primary-foreground: 212 100% 18%; /* Darker Blue */
+    --sidebar-accent: 170 64.2% 55%; /* Lighter Teal */
+    --sidebar-accent-foreground: 212 100% 10%; /* Very Dark Blue */
+    --sidebar-border: 212 100% 20%;
+    --sidebar-ring: 199 100% 44.1%; /* Light Blue */
   }
 }
 
@@ -97,5 +99,6 @@
 
   body {
     @apply bg-background text-foreground;
+    font-family: var(--font-sans);
   }
 }
