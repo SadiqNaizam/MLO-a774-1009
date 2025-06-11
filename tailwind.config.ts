@@ -12,7 +12,7 @@ export default {
 	theme: {
 		container: {
 			center: true,
-			padding: '2rem',
+			padding: '1rem', // TSB: Updated to 16px
 			screens: {
 				'2xl': '1400px'
 			}
@@ -26,7 +26,9 @@ export default {
 				foreground: 'hsl(var(--foreground))',
 				primary: {
 					DEFAULT: 'hsl(var(--primary))',
-					foreground: 'hsl(var(--primary-foreground))'
+					foreground: 'hsl(var(--primary-foreground))',
+					light: 'hsl(var(--primary-light))', // TSB: Added primary-light
+					dark: 'hsl(var(--primary-dark))'    // TSB: Added primary-dark
 				},
 				secondary: {
 					DEFAULT: 'hsl(var(--secondary))',
@@ -52,7 +54,7 @@ export default {
 					DEFAULT: 'hsl(var(--card))',
 					foreground: 'hsl(var(--card-foreground))'
 				},
-				sidebar: {
+				sidebar: { // Sidebar colors now map to updated CSS vars
 					DEFAULT: 'hsl(var(--sidebar-background))',
 					foreground: 'hsl(var(--sidebar-foreground))',
 					primary: 'hsl(var(--sidebar-primary))',
@@ -64,9 +66,13 @@ export default {
 				}
 			},
 			borderRadius: {
-				lg: 'var(--radius)',
-				md: 'calc(var(--radius) - 2px)',
-				sm: 'calc(var(--radius) - 4px)'
+				lg: 'var(--radius)', // TSB: Updated to 1rem (16px)
+				md: 'calc(var(--radius) - 0.25rem)', // TSB: e.g., 12px if radius is 1rem
+				sm: 'calc(var(--radius) - 0.5rem)',  // TSB: e.g., 8px if radius is 1rem
+				btnPill: '50px' // TSB: For pill-shaped buttons
+			},
+			fontFamily: {
+				sans: ['var(--font-sans)'], // TSB: Added specified sans-serif stack
 			},
 			keyframes: {
 				'accordion-down': {
